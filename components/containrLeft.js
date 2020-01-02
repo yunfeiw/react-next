@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { getList, getaxiosGL } from '../store/gold';
 
-import { Select, Row, Col, Button } from 'antd';
+import { Select, Row, Col, Button, Icon } from 'antd';
 import List from './leftList';
 const { Option } = Select;
 
@@ -24,12 +24,24 @@ class ContainrLeft extends Component {
                     {`
                         .demo-infinite-container{padding:0;}
                         .ant-list-item{margin:15px 0;padding:5px 10px;background-color:#fff;}
+                        .icon_yf{
+                            color: #fff;
+                            background-color: #007fff;
+                            font-size: 20px;
+                            text-align: center;
+                            margin: 0 8px;
+                            margin-right: 21px;
+                            height: 32px;
+                            line-height: 29px;
+                        }
                     ` }
                 </style>
                 <Row style={styles.bg}>
-                    <Col span={2} >图标</Col>
+                    <Col span={2} className='icon_yf'>
+                        <Icon type="alert" />
+                    </Col>
                     <Col span={2} >掘金</Col>
-                    <Col span={10} className='select_type'>
+                    <Col span={8} className='select_type'>
                         <Select style={styles.select} defaultValue={'frontend'} onChange={this.handleChange}>
                             <Option value="frontend">前端</Option>
                             <Option value="backend">后端</Option>
