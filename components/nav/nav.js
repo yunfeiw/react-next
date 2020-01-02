@@ -54,12 +54,12 @@ class Nav extends Component {
         return (
             <Row style={styles.nav} >
                 <Col span={4} style={styles.left}>
-                    <img style={styles.img} src="/static/img/logo.jpg" />
+                    <img style={styles.img} src="static/img/logo.jpg" />
                 </Col>
                 <Col span={8} style={{ lineHeight: '50px' }}>
                     <Input placeholder="掘金搜索，如：Java，阿里巴巴，前端面试" />
                 </Col>
-                <Col span={8} offset={3} style={styles.right}>
+                <Col span={9} offset={2} style={styles.right}>
                     {/* 推广 */}
                     <Dropdown
                         overlay={bookletMenu}
